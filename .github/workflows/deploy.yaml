@@ -14,20 +14,20 @@ jobs:
 
 
     steps:
-        -name: Checkout repository
+       - name: Checkout repository
          uses: actions/checkout@v4
 
-        -name: Setup Node.js
+       - name: Setup Node.js
          uses: actions/setup-node@v3
          with:
-           node-version: 20
-        -name: Install dependencies
+           node-version: '20'
+       - name: Install dependencies
          uses: npm install
 
-        -name: Build Project
+       - name: Build Project
          uses: npm run build
 
-        -name: Deploy to Github Pages
+       - name: Deploy to Github Pages
          uses: JamesIves/github-pages-deploy-actions@4.1.0
          with:
             branch: gh-pages
