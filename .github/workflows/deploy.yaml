@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-         env:
+        env:
           userEmail: ${{ secrets.UserEmail }}  
           username: ${{ secrets.UserName }}
         run: |
