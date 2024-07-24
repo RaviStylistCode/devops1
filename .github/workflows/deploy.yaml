@@ -26,11 +26,10 @@ jobs:
 
       - name: Deploy to GitHub Pages
         env:
-          userEmail: ${{ secrets.UserEmail }}  
-          username: ${{ secrets.UserName }}
+          Github_Token : ${{secrets.My_Secret}}
         run: |
-          git config --global user.email "${userEmail}"
-          git config --global user.name " ${username}"
+          git config --global user.email "${{secrets.UserEmail}}"
+          git config --global user.name " ${{secrets.UserName}}"
           npm install -g gh-pages
           gh-pages -d build
 
