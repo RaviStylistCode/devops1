@@ -1,7 +1,6 @@
 {
   "name": "devops1",
   "private": true,
-  "homepage": "https://RaviStylistCode.github.io/devops1",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
